@@ -18,28 +18,24 @@
         <p class="nav-item text-white display-4 py-0 my-0">Bienvenido a <span class="fw-bold">Style&Relax</span></p>
     </nav>
 
-    <div class="container-fluid  px-0">
-        <div class="row">
-            <div class="col-md-6 px-0">
-                <img src="./img/imagen-principal.jpg" alt="imagen-principal" class="img-fluid">
-            </div>
-            <div class="col-md-6 fondo-form d-flex justify-content-center text-white align-items-center">
-                <form action="POST">
-                    <div>
-                        <label for="usuario" class="form-label fs-4">Usuario:</legend>
-                            <input id="usuario" type="text" class="form-control">
-                    </div>
-                    <div class="mb-4">
-                        <label for="pass" class="form-label fs-4">Contrase&ntilde;a:</label>
-                        <input id="pass" type="password" class="form-control">
-                    </div>
-
-
-                </form>
-            </div>
-        </div>
+    <div class="fondo-principal">
     </div>
 
+    <div class="hero">
+        <div class="container container-fluid container-sm p-5">
+            <form class="form fondo-form w-auto" action="post">
+                <label class="form-label text-white" for="usuario">Usuario:</label>
+                <input class="form-control" type="text" name="usuario" id="usuario">
+                <label class="form-label text-white" for="pass">Contrase&ntilde;a:</label>
+                <input class="form-control" type="password" name="pass" id="pass">
+                <div class="container-fluid">
+                    <button class="btn btn-primary mt-3 w-100" type="submit">Iniciar sesi&oacute;n</button>
+                    <button class="btn btn-primary mt-3 w-100" type="submit">Registrarse</button>
+                </div>
+            </form>
+        </div>
+
+    </div>
 
 
 </body>
