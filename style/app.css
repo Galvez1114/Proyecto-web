@@ -7,8 +7,9 @@ body {
     background-image: url(../img/imagen-principal.jpg);
     background-size: cover;
     background-position: center;
-    height: 600px;
+    height: max-content;
     position: static;
+    margin-bottom: 1rem;
 }
 
 .fondo-principal{
@@ -26,16 +27,34 @@ h1{
 }
 
 
+.fondo-cont{
+    border-radius: 25px;
+    background-color: #393536a1;
+}
 
 
-
+@media (max-width: 768px) {
+    .columna{
+        padding-top: 1rem;
+    }
+}
 
 .fondo-nav {
     background-color: #6F6159;
 }
 .fondo-form {
-    background-color: #393536;
-    opacity: 73%;
-    padding: 3rem;
-    
+    background-color: #393536a1;
+    padding: 2rem;
+}
+
+@media (min-width:768px){
+    .contenedor{
+        width: fit-content;
+    }
+}
+
+footer{
+    display: flex;
+    flex-direction: column;
+    object-position: bottom;
 }
