@@ -52,6 +52,9 @@ h1{
         width: fit-content;
     }
 }
+.justificado{
+    text-align: justify;
+}
 
 footer{
     display: flex;
