@@ -39,6 +39,21 @@ h1{
     }
 }
 
+.fondo-boton{
+    color: white !important;
+   
+    background-color: #6f6159e0 !important;
+}
+
+.fondo-formulario-registro{
+    background-color: #79757534;
+}
+
+.fondo-boton:hover{
+    background-color: #574c46 !important;
+    color: white !important;
+}
+
 .fondo-nav {
     background-color: #6F6159;
 }
@@ -49,7 +64,7 @@ h1{
 
 @media (min-width:768px){
     .contenedor{
-        width: fit-content;
+        width: 35%;
     }
 }
 .justificado{
