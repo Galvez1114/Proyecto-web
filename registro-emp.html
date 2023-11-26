@@ -10,7 +10,7 @@
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
         crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./style/app.css">
-    <title>Registrate</title>
+    <title>Registro de empleados</title>
 </head>
 
 <body>
@@ -27,14 +27,14 @@
             </div>
         </div>
     </nav>
-    
-    
+
+
 
     <div class="container-md contenedor mb-3 shadow mx-auto">
         <div class="row">
-            <form class="form w-100 fondo-formulario-registro mt-2 rounded-3 py-3 px-3" action="registro.php"
-                method="post">
-                <h1 class="text-center">Crea tu cuenta</h1>
+            <form class="form w-100 fondo-formulario-registro mt-2 rounded-3 py-3 px-3"
+                action="registro_responsable.php" method="post">
+                <h1 class="text-center">Registra un nuevo responsable</h1>
                 <!--Campos de registro-->
                 <!--Nombre de usuario-->
                 <label class="form-label" for="nombre">Nombre:</label>
@@ -53,7 +53,7 @@
                 <input class="form-control" name="numTelefono" id="numTelefono" type="tel">
 
                 <!--Nuevo campo: Área-->
-                <label class="form-label" for="area">Área:</label>
+                <label class="form-label" for="area">&Aacute;rea:</label>
                 <input class="form-control" name="area" id="area" type="text">
 
                 <!--Nuevo campo: Turno-->
@@ -61,21 +61,15 @@
                 <select class="form-select" name="turno" id="turno">
                     <option value="manana">Mañana</option>
                     <option value="tarde">Tarde</option>
-                    <option value="noche">Noche</option>
                 </select>
 
                 <!--Contraseña-->
-                <div class="row">
-                    <div class="col-md-6">
-                        <label class="form-label pt-3" for="pass">Ingrese una contraseña:</label>
-                        <input class="form-control" name="pass" id="pass" type="password">
-                    </div>
-                    <div class="col-md-6">
-                        <label class="form-label pt-3" for="pass-verify">Confirme su contraseña:</label>
-                        <input class="form-control" name="pass-verify" id="pass-verify" type="password">
-                    </div>
-                </div>
-                
+                <label class="form-label pt-3" for="pass">Ingrese una contraseña:</label>
+                <input class="form-control" name="pass" id="pass" type="password">
+
+                <label class="form-label pt-3" for="pass-verify">Confirme su contraseña:</label>
+                <input class="form-control" name="pass-verify" id="pass-verify" type="password">
+
                 <!--Botones-->
                 <button class="btn fondo-boton fs-5 text-white w-100 my-3 " type="submit">Crear cuenta</button>
             </form>
