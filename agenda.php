@@ -1,3 +1,11 @@
+<?php
+session_start();
+if (!isset($_SESSION['usuario'])) {
+    header("Location: index.html");
+    exit();
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -26,6 +34,6 @@
         </div>
     </nav>
 
-    
+    <h1 class="text-center">Bienvenido <?php echo $_SESSION['usuario']; ?></h1>
 </body>
 </html>
