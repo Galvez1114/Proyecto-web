@@ -4,12 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style/bootstrap.css">
+    <script src="js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="./style/app.css">
+    <script type="text/javascript" src="./js/validacion.js"></script>
+
     <title>Registrate</title>
 </head>
 
@@ -28,10 +27,10 @@
         </div>
     </nav>
 
-    <div class="container-md contenedor mb-3 shadow mx-auto">
+    <div class="container-md contenedor mb-3 shadow mx-auto rounded-3">
         <div class="row">
-            <form class="form w-100 fondo-formulario-registro mt-2 rounded-3 py-3 px-3" action="registro.php"
-                method="post">
+            <form class="form w-100 fondo-formulario-registro mt-2 rounded-3 py-3 px-3" id="captch_form"
+                action="registro_cliente.php" method="post">
                 <h1 class="text-center">Crea tu cuenta</h1>
                 <!--Campos de registro-->
                 <!--Nombre de usuario-->
@@ -47,26 +46,24 @@
                 <label class="form-label" for="numTelefono">Número de teléfono:</label>
                 <input class="form-control" name="numTelefono" id="numTelefono" type="tel">
                 <!--Contraseña-->
-                <div class="container-xxl">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <label class="form-label pt-3" for="pass">Ingrese una contrase&ntilde;a:</label>
-                            <input class="form-control" name="pass" id="pass" type="password">
-                        </div>
-                        <div class="col-md-6">
-                            <label class="form-label pt-3" for="pass-verify">Confirme su contrase&ntilde;a:</label>
-                            <input class="form-control" name="pass-verify" id="pass-verify" type="password">
-                        </div>
+                <label class="form-label pt-3" for="pass">Ingrese una contrase&ntilde;a:</label>
+                <input class="form-control" name="pass" id="pass" type="password">
+                <div class="row">
+                    <div class="col-md-6">
+                        <label>Codigo captcha</label>
+                        <input type="text" name="codigo_captcha" id="id_codigo_captcha" class="form-control"
+                            autocomplete="off" />
+                    </div>
+                    <div class="col-md-6">
+                        <img class="mt-4 h-auto img-fluid rounded" src="imagen.php" id="captcha_image" alt="captcha" />
                     </div>
                 </div>
-               
 
+                <!--Botones-->
+                <button class="btn fondo-boton fs-5 text-white w-100 my-3 " type="submit" onclick="prueba()">Crear
+                    cuenta</button>
+            </form>
         </div>
-
-        <!--Botones-->
-        <button class="btn fondo-boton fs-5 text-white w-100 my-3 " type="submit">Crear cuenta</button>
-        </form>
-    </div>
 
     </div>
 

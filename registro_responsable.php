@@ -16,7 +16,7 @@
         $dbh = new PDO($dsn,'root','');
         $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-        $stm = $dbh -> prepare("insert into responsables(nivel,nombre_resp,apellidos,email,num_telefono,area,turno,pass) values (2,?,?,?,?,?,?,?)");
+        $stm = $dbh -> prepare("insert into responsables(nivel,nombre_resp,apellidos,email,num_telefono,area,turno,pass) values (1,?,?,?,?,?,?,?)");
         
         $stm -> bindPAram(1,$nombre);
         $stm -> bindPAram(2,$ape);

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/bootstrap.css">
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="./style/app.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container-xl mt-5 ">
+        <form class="form" action="registrarServicio.php" method="post">
+            <label class="form-label" for="">Area:</label>
+            <select class="form-select" name="area" id="area">
+                <option class="" value="salon">Salon</option>
+                <option class="" value="barberia">Barberia</option>
+                <option class="" value="spa">SPA</option>
+            </select>
+            <label class="form-label" for="Concepto">Concepto:</label>
+            <input class="form-control" type="text" name="concepto" id="concepto">
+            <label class="form-label" for="costo">Costo:</label>
+            <input class="form-control" type="text" name="costo" id="costo">
+            <label class="form-label" for="desc">Descripci&oacute;n</label>
+            <input class="form-control" type="text" name="desc" id="desc">
+
+            <button class="btn btn-primary mt-3">Guardar</button>
+            <a href="admin.php" class="btn btn-danger mt-3">Cancelar</a>
+        </form>
+    </div>
+
+
+</body>
+
+</html>
