@@ -19,7 +19,7 @@ if (!$_SESSION['usuario']) {
     <title>Inicio</title>
 </head>
 
-<body onload="sesion()">
+<body>
     <nav class="container-fluid fondo-nav px-5 py-3">
         <div class="row">
             <div class="col-md-6 text-center mt-1">
@@ -36,7 +36,7 @@ if (!$_SESSION['usuario']) {
 
     <div class="container">
         <form action="reservar.php" method="post">
-            <button id="area" name="area" type="submit" value="barberia">Agendar cita en barberia</button>
+            <button id="area" name="area" type="submit" value="Barberia">Agendar cita en barberia</button>
         </form>
 
     </div>

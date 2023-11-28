@@ -26,18 +26,31 @@
             while ($row = $result->fetch_assoc()) {
                 $conceptos[] = $row['concepto'];
             }
-            echo '<select class="form-select" name="area" id="area">';
+            echo '<select class="form-select" name="concepto" id="area">';
             foreach ($conceptos as $valor) {
                 echo "<option value='$valor'>$valor</option>";
             }
             echo '</select>';
             ?>
-            <!--Script para la eleccion del dia-->
+            
             <label for="" class="form-label">Eliga una fecha:</label>
             <input class="mt-2" type="date" name="fecha" id="fecha" min="<?php echo date('Y-m-d'); ?>" required>
             <?php  echo '<input type="hidden" name="area" value="' . $area . '">' ?>
-            <input type="submit" name="validarHora" class="btn btn-primary">  
-            
+            <input type="submit" name="validarHora" class="btn btn-primary"> 
+            <label class="label-form" for="responsable">Elige un responsable:</label>
+            <?php       
+            $sql = "SELECT nombre_resp FROM responsables where area = '$area'";
+            $result = $conn->query($sql);
+            $responsables = array();
+            while ($row = $result->fetch_assoc()) {
+                $responsables[] = $row['nombre_resp'];
+            }
+            echo '<select class="form-select" name="responsable" id="responsable">';
+            foreach ($responsables as $valor) {
+                echo "<option value='$valor'>$valor</option>";
+            }
+            echo '</select>';
+            ?>
         </form>
        
         
