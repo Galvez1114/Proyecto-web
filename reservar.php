@@ -30,7 +30,7 @@
             <!--Script para llenar el select de conceptos-->
             <?php
             $area = $_POST['area'];
-            $conn = new mysqli("localhost", "root", "", "style_bd");          
+            $conn = new mysqli("162.241.60.126", "choixcom", "Cherry123-", "choixcom_Galvez");                   
             
             $sql = "SELECT concepto FROM servicios where area = '$area'";
             $result = $conn->query($sql);
