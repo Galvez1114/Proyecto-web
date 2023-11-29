@@ -1,8 +1,8 @@
 <?php
 session_start();
 
-if (!$_SESSION['usuario']) {
-    header("Location: inicio.php");
+if (!$_SESSION['usuario'] || !$_SESSION['nivel'] > 0) {
+    header("Location: index.html");
 }
 
 // Conexión a la base de datos

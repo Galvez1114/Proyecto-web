@@ -31,10 +31,10 @@ try {
                 #Si la contrasena es correcta, checar si es admin o responsable
                 $_SESSION['usuario'] = $registro['nombre_resp'];
                 if ($registro['nivel'] == 2) {
-                    
                     header("Location: agenda.php");
                     exit();
                 } else {
+                    $_SESSION['nivel'] = 1;
                     header("Location: admin.php");
                     exit();
                 }

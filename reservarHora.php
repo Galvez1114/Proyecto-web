@@ -12,6 +12,16 @@
 
 <body>
 
+    <nav class="container-fluid fondo-nav px-5 py-3">
+        <div class="row">
+            <div class="col-md-6 text-center mt-1">
+                <p class="text-white h2 py-0 my-0 text-center">Bienvenido a <span class="fw-bold">Style&Relax</span></p>
+            </div>
+        </div>
+
+
+    </nav>
+
     <div class="container">
         <form action="registrarCita.PHP" method="post" class="form">
             <h1 class="text-center">Concluye tu reserva</h1>
@@ -41,12 +51,12 @@
             mysqli_close($conn);
 
             ?>
-             <?php  echo '<input type="hidden" name="area" value="' . $area . '">' ?>
-             <?php  echo '<input type="hidden" name="fecha" value="' . $fecha . '">' ?>
-             <?php  echo '<input type="hidden" name="responsable" value="' . $responsable . '">' ?>
-             <?php  echo '<input type="hidden" name="concepto" value="' . $concepto . '">' ?>
+            <?php echo '<input type="hidden" name="area" value="' . $area . '">' ?>
+            <?php echo '<input type="hidden" name="fecha" value="' . $fecha . '">' ?>
+            <?php echo '<input type="hidden" name="responsable" value="' . $responsable . '">' ?>
+            <?php echo '<input type="hidden" name="concepto" value="' . $concepto . '">' ?>
             <button class="btn btn-primary" type="submit">Registrar cita</button>
-            <a  class="btn btn-danger" href="catalogo.php">Elegir fecha diferetne</a>
+            <a class="btn btn-danger" href="catalogo.php">Elegir fecha diferetne</a>
         </form>
     </div>
 

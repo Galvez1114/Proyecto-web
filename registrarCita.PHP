@@ -11,6 +11,15 @@
 </head>
 
 <body>
+<nav class="container-fluid fondo-nav px-5 py-3">
+        <div class="row">
+            <div class="col-md-6 text-center mt-1">
+                <p class="text-white h2 py-0 my-0 text-center">Bienvenido a <span class="fw-bold">Style&Relax</span></p>
+            </div>
+        </div>
+
+
+    </nav>
     <div class="container-xl">
         <?php
         session_start();
@@ -51,8 +60,7 @@
         $stm->bindPAram(8, $area);
         $stm->execute();
 
-        echo '<div class=" mt-5 alert alert-secondary alert-dismissible">
-<button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+        echo '<div class=" mt-5 alert alert-success">
 <strong>Cita Registrada!</strong> No olvides asistir 15 minutos antes.
 </div>';
 
