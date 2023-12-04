@@ -44,6 +44,10 @@ body {
     .columna{
         padding-top: 1rem;
     }
+    .info-contacto{
+        margin-left: 1rem !important;
+        margin-right: 1rem !important;
+    }
 }
 
 .fondo-boton{
