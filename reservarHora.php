@@ -34,7 +34,7 @@
             $concepto = $_POST['concepto'];
 
             $horasPredeterminadas = array('07:00:00', '08:00:00', '09:00:00', '10:00:00', '11:00:00', '12:00:00', '15:00:00', '16:00:00', '17:00:00', '18:00:00', '19:00:00');
-            $conn = new mysqli("162.241.60.126", "choixcom", "Cherry123-", "choixcom_Galvez"); 
+            $conn = new mysqli("localhost", "root", "", "style_bd"); 
             $sql = "SELECT hora FROM citas where fecha = '$fecha' and area = '$area' and responsable = '$responsable'";
             $result = $conn->query($sql);
             $horasReservadas = array();

@@ -44,8 +44,8 @@
         $telefono_cliente = $row['num_telefono'];
 
         mysqli_close($conn);
-        $dsn = "mysql:host=localhost;dbname=choixcom_Galvez";
-        $dbh = new PDO($dsn, 'choixcom', 'Cherry123-');
+        $dsn = "mysql:host=localhost;dbname=style_bd";
+        $dbh = new PDO($dsn, 'root', '');
         $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
         $stm = $dbh->prepare("insert into citas(fecha,hora,responsable,concepto,costo,cliente,telefono_cliente,area) values (?,?,?,?,?,?,?,?)");
